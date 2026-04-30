@@ -15,7 +15,7 @@ var itemVoided = ikContext.account.transactionLines.find(function (line) {
     return line.itemSku === sku && line.amount < 0;
 });
 
-if (ikContext.account.isDraft === true && ikContext.account.totalAmount > 9000 && !isSplitChild && !itemPresent && !itemVoided) {
+if (ikContext.account.isDraft === true && ikContext.account.totalAmount > 2000 && !isSplitChild && !itemPresent && !itemVoided) {
     output.rewards.push({
         type: "ADD",
         sku: sku,
